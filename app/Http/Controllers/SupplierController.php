@@ -34,7 +34,7 @@ class SupplierController extends Controller
     {
         $supplier = new Supplier;
 
-        $data = $supplier->get();
+        $data = $supplier->select('*', 'nama_supplier as text')->get();
 
         return $data;
     }

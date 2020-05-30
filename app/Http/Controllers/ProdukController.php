@@ -26,7 +26,7 @@ class ProdukController extends Controller
     {
         $p_header = new ProdukHeader;
 
-        $data = $p_header->get();
+        $data = $p_header->select('*', 'nama_produk as text')->get();
 
         return $data;
     }
